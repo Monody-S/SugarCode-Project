@@ -1,0 +1,19 @@
+{
+  "trigger": {
+    "prefix": "trigger",
+    "body": [
+        "@条件",
+        "    ${2:#条件#}",
+        "@效果",
+        "    ${1:#效果#}"
+    ],
+    "description": "SugarCode触发器"
+  },
+  "function": {
+    "prefix": "function",
+    "body": [
+      ">${1:#函数#}|${2:#参数#}"
+    ],
+    "description": "SugarCode函数"
+  }
+}
