@@ -20,12 +20,11 @@
       "name": "constant.language.SugarCode"
     },
     {
-      "match": "(>)(.*)(\\|)(.*)",
+      "match": "(>)(.*)(\\|)",
       "captures": {
         "1": {"name":"constant.language.SugarCode"},
         "2": {"name":"support.function.SugarCode"},
-        "3": {"name":"constant.language.SugarCode"},
-        "4": {"name":"variable.parameter.SugarCode"}
+        "3": {"name":"constant.language.SugarCode"}
       }
     }
   ]
