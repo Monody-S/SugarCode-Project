@@ -110,3 +110,43 @@
 ```json
 [{"条件":[],"效果":[{"调用":"proAW","参数":[0.0,1.0,0.0,50.0]}]}]
 ```
+
+## SugarCode使用例
+比如我们想要编写一个激活码功能，但一般来说，激活码里的内容有时就连类型都不一样
+例如一个激活码里可能可以给予金币，同时也给予经验值等其他类型的物品
+这时候我们就可以使用SugarCode来解决这个问题
+* 步骤1：编写SugarCode
+首先我们分析这个问题中我们有哪些类型，很明显，有“金币”与“经验值”两种类型的物品
+那么假如给予500金币与300经验值，我们可以编写以下内容
+```实例.sgc
+@条件@效果
+    > coin | 500
+    > exp  | 300
+```
+然后导入SugarCode库，调用“dumps”函数，将参数“noCondition”设为True（因为激活码系统不需要考虑条件）
+```python
+from . import SugarCode
+exampleString = """
+@条件@效果
+    > coin | 500
+    > exp  | 300
+"""
+exampleList = SugarCode.dumps(exampleString,noCondition=True)
+```
+此时exampleList的内容如下：
+```json
+[{"调用": "coin", "参数": 500.0}, {"调用": "exp", "参数": 300.0}]
+```
+然后我们遍历这一个列表
+```python
+from group in exampleList:
+    Uname=k["调用"]
+    Upmt=k["参数"]      
+```
+接下来只需要用if-elif来判断调用的内容即可完成激活码功能的编写啦！
+```python
+if Uname == "coin":
+    ...
+elif Uname == "exp":
+    ...
+```
