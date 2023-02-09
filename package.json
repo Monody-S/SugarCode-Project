@@ -1,14 +1,13 @@
 {
   "name": "sugarcode",
   "displayName": "SugarCode",
-  "description": "MED+梦龙是RBQ，MRS是超级RBQ",
+  "description": "MED+梦龙是RBQ",
   "version": "1.1.4",
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "*"
   },
   "categories": [
-    "Programming Languages",
-    "Snippets"
+    "Programming Languages"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -18,7 +17,7 @@
         "extensions": [
           ".sgc"
         ],
-        "configuration": "./syntaxes/configuration.json",
+        "configuration": "./language-configuration.json",
         "icon": {
           "light": "./logo.png",
           "dark": "./logo.png"
@@ -29,13 +28,13 @@
       {
         "language": "SugarCode",
         "scopeName": "source.SugarCode",
-        "path": "./syntaxes/grammars.json"
+        "path": "./syntaxes/SugarCode.tmLanguage.json"
       }
     ],
     "snippets": [
       {
         "language": "SugarCode",
-        "path": "./syntaxes/snippets.json"
+        "path": "./snippets/SugarCode.snippets.code-snippets"
       }
     ]
   }
