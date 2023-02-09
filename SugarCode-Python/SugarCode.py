@@ -3,10 +3,8 @@
 例如SugarCode的编译与反编译
 dumps为将SugarCode反编译为json格式
 loads为将标准json(SC)编译为SugarCode
-
+详细内容见https://github.com/Monody-S/SugarCode-Project/tree/main/SugarCode-Python
 ————————————————————————————————————————————————————————————
-
-SugarCode语法：
 
  · 用“@条件”表示一个新的触发器,且接下来的所有调用均为条件
 
@@ -73,9 +71,21 @@ class SgcDumpError(Exception):
         return self.message
 
 from decimal import *
-def dumps(sugarCodeS:str)->list:
+def dumps(
+        sugarCodeS:str,
+        noCondition:bool=False,
+        cdKeyword:str="条件",
+        ectKeyword:str="效果",
+        outSring1:str="调用",
+        outSring2:str="参数"
+    )->list:
     """
     编译SugarCode
+     · noCondition - 无条件
+     · cdKeyword   - 条件关键词
+     · ectKeyword  - 效果关键词
+     · outSring1   - 输出关键词1
+     · outSring2   - 输出关键词2
     """
     codeS=[]
     antMode=False
@@ -84,7 +94,7 @@ def dumps(sugarCodeS:str)->list:
     nowPmts=[]
     nowObj=[]
     nowName=""
-    nowNode={"条件":[],"效果":[]}
+    nowNode={cdKeyword:[],ectKeyword:[]}
     getName=False
     skipMode=True
     getPmt=False
@@ -93,12 +103,14 @@ def dumps(sugarCodeS:str)->list:
     ngeMode=False
     minDigitDeep=1
     idx=-1
+
     def insertPmt(deep:int,obj:any)->None:
         nonlocal nowPmts
         aimList=nowPmts
         for i in range(deep):
             aimList=aimList[-1]
         aimList.append(obj)
+
     while idx<size-1:
         idx+=1
         try:
@@ -119,35 +131,34 @@ def dumps(sugarCodeS:str)->list:
                     nowName+=sugarCodeS[idx]
                 if sugarCodeS[idx] == "|":
                     idx-=1
-                
-            elif sugarCodeS[idx] == "@" and idx<=size-3:
+            elif sugarCodeS[idx] == "@":
                 #print(getPmt)
                 if len(nowPmts)==1:
                     nowPmts=nowPmts[0]
                 if nowName != "":
-                    nowObj.append({"调用":nowName,"参数":nowPmts})
+                    nowObj.append({outSring1:nowName,outSring2:nowPmts})
                 nowPmts=[]
                 getPmt=False
-                if sugarCodeS[idx:idx+3] == "@条件":
+                if idx+len(cdKeyword)<size and sugarCodeS[idx:idx+len(cdKeyword)+1] == f"@{cdKeyword}":
                     if nowMode == "":
-                        nowMode="条件"
+                        nowMode=cdKeyword
                         nowObj=[]
                         skipMode=True
-                    elif nowMode == "效果":
-                        nowNode["效果"]=nowObj
+                    elif nowMode == ectKeyword:
+                        nowNode[ectKeyword]=nowObj
                         codeS.append(nowNode)
                         nowObj=[]
-                        nowMode="条件"
+                        nowMode=cdKeyword
                         skipMode=True
-                        nowNode={"条件":[],"效果":[]}
-                elif sugarCodeS[idx:idx+3] == "@效果":
+                        nowNode={cdKeyword:[],ectKeyword:[]}
+                elif idx+len(ectKeyword)<size and sugarCodeS[idx:idx+len(ectKeyword)+1] == f"@{ectKeyword}":
                     if nowMode == "":
-                        nowMode="效果"
+                        nowMode=ectKeyword
                         nowObj=[]
                         skipMode=True
-                    elif nowMode == "条件":
-                        nowNode["条件"]=nowObj
-                        nowMode="效果"
+                    elif nowMode == cdKeyword:
+                        nowNode[cdKeyword]=nowObj
+                        nowMode=ectKeyword
                         nowObj=[]
                         skipMode=True
                 #print(getPmt)
@@ -156,7 +167,7 @@ def dumps(sugarCodeS:str)->list:
                 if len(nowPmts):
                     if len(nowPmts)==1:
                         nowPmts=nowPmts[0]
-                    nowObj.append({"调用":nowName,"参数":nowPmts})
+                    nowObj.append({outSring1:nowName,outSring2:nowPmts})
                 nowPmts=[]
                 nowName=""
                 getName=True
@@ -227,23 +238,43 @@ def dumps(sugarCodeS:str)->list:
             raise SgcDumpError(f"SugarCode编译异常！错误出现在第[{idx+1}]字符“{sugarCodeS[idx]}”") from None
     if len(nowPmts)==1:
         nowPmts=nowPmts[0]
-    nowObj.append({"调用":nowName,"参数":nowPmts})
-    nowNode["效果"]=nowObj
+    nowObj.append({outSring1:nowName,outSring2:nowPmts})
+    nowNode[ectKeyword]=nowObj
     codeS.append(nowNode)
+    if noCondition:
+        temp=[]
+        for group in codeS:
+            temp+=group[ectKeyword]
+        return temp
     return codeS
 
-def loads(sugarCode:list)->str:
+def loads(
+        sugarCode:list,
+        indent:int=4,
+        noCondition:bool=False,
+        cdKeyword:str="条件",
+        ectKeyword:str="效果",
+        inSring1:str="调用",
+        inSring2:str="参数"
+    )->str:
     """
     反编译SugarCode
+     · indent      - 首行缩进[0,+∞)
+     · noCondition - 无条件
+     · cdKeyword   - 条件关键词
+     · ectKeyword  - 效果关键词
+     · inSring1    - 输入关键词1
+     · inSring2    - 输入关键词2
     """
     codeS=[]
     for group in sugarCode:
-        codeS.append("@条件")
-        for node in group["条件"]:
-            codeS.append(f"    >{node['调用']} | {load(node['参数'])}")
-        codeS.append("@效果")
-        for node in group["效果"]:
-            codeS.append(f"    >{node['调用']} | {load(node['参数'])}")
+        codeS.append(f"@{cdKeyword}")
+        if not noCondition:
+            for node in group[cdKeyword]:
+                codeS.append(f"{' '*indent}>{node[inSring1]} | {load(node[inSring2])}")
+        codeS.append(f"@{ectKeyword}")
+        for node in group[ectKeyword]:
+            codeS.append(f"{' '*indent}>{node[inSring1]} | {load(node[inSring2])}")
         codeS.append("")
     return "\n".join(codeS)
 
@@ -261,19 +292,38 @@ def load(obj:any)->str:
     elif type(obj) == type(123) or type(obj) == type(1.1):
         return f"{obj}"
     
-def CheckCFQZ(CFQ:list)->bool:
+def CheckCFQZ(
+        CFQ:list,
+        cdKeyword:str="条件",
+        ectKeyword:str="效果",
+        inSring1:str="调用",
+        inSring2:str="参数"
+    )->bool:
     """
     监测一个列表是否满足SugarCode列表条件
+     · cdKeyword   - 条件关键词
+     · ectKeyword  - 效果关键词
+     · inSring1    - 输入关键词1
+     · inSring2    - 输入关键词2
     """
-    if type(CFQ)!=type([]): return False
+    if type(CFQ)!=type([]): 
+        return False
+    
     for i in CFQ:
-        if type(i)!=type({}): return False
-        if "条件" not in i or "效果" not in i: return False
-        if type(i["条件"])!=type([]) or type(i["效果"])!=type([]): return False
-        for j in i["条件"]:
-            if type(j)!=type({}): return False
-            if "调用" not in j or "参数" not in j: return False
-        for j in i["效果"]:
-            if type(j)!=type({}): return False
-            if "调用" not in j or "参数" not in j: return False
+
+        if type(i)!=type({}): 
+            return False
+        if cdKeyword not in i or ectKeyword not in i: 
+            return False
+        if type(i[cdKeyword])!=type([]) or type(i[ectKeyword])!=type([]): 
+            return False
+        
+        for j in i[cdKeyword]+i[ectKeyword]:
+            if type(j)!=type({}): 
+                return False
+            if inSring1 not in j or inSring2 not in j: 
+                return False
+            if type(j[inSring1]) != type(str):
+                return False
+            
     return True
