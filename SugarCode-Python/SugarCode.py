@@ -197,7 +197,7 @@ def dumps(
                         idx+=1
                     if ngeMode:
                         digit=-digit
-                    insertPmt(pmtDeep,float(digit))
+                    insertPmt(pmtDeep,float(digit) if minDigitMode else int(digit))
                 elif sugarCodeS[idx]=='"':
                     string=""
                     idx+=1
