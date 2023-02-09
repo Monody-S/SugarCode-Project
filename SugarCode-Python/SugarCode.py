@@ -292,8 +292,8 @@ def load(obj:any)->str:
     elif type(obj) == type(123) or type(obj) == type(1.1):
         return f"{obj}"
     
-def CheckCFQZ(
-        CFQ:list,
+def CheckSgcList(
+        sgcList:list,
         cdKeyword:str="条件",
         ectKeyword:str="效果",
         inSring1:str="调用",
@@ -306,10 +306,10 @@ def CheckCFQZ(
      · inSring1    - 输入关键词1
      · inSring2    - 输入关键词2
     """
-    if type(CFQ)!=type([]): 
+    if type(sgcList)!=type([]): 
         return False
     
-    for i in CFQ:
+    for i in sgcList:
 
         if type(i)!=type({}): 
             return False
