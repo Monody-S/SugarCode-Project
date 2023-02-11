@@ -27,7 +27,7 @@
     "grammars": [
       {
         "language": "SugarCode",
-        "scopeName": "source.SugarCode",
+        "scopeName": "text.SugarCode",
         "path": "./syntaxes/SugarCode.tmLanguage.json"
       }
     ],
