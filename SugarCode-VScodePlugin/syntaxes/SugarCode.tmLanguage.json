@@ -1,5 +1,5 @@
 {
-  "scopeName": "source.SugarCode",
+  "scopeName": "text.SugarCode",
   "patterns": [
     {
       "include": "#value"
@@ -29,6 +29,10 @@
       "patterns": [
         {
           "match": "(?x)\\\\(?:[\"\\\\/bfnrt]|u[0-9a-fA-F]{4})",
+          "name": "constant.character.escape.json"
+        },
+        {
+          "match": "<.*>",
           "name": "constant.character.escape.json"
         },
         {
