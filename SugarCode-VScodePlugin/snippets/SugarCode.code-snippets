@@ -46,22 +46,22 @@
   },
   "speed": {
     "prefix": "speed",
-    "body": ">speed | [${1:#目标#},${2:#速度#}]",
+    "body": ">speed | [${1:#目标#}, ${2:#速度#}]",
     "description": "【效果】速度改变"
   },
   "attact": {
     "prefix": "attact",
-    "body": ">attact | [${1:#目标#},${2:#攻击力#}]",
+    "body": ">attact | [${1:#目标#}, ${2:#攻击力#}]",
     "description": "【效果】攻击力改变"
   },
   "trueAttact": {
     "prefix": "trueAttact",
-    "body": ">trueAttact | [${1:#目标#},${2:#最终伤害值#}]",
+    "body": ">trueAttact | [${1:#目标#}, ${2:#最终伤害值#}]",
     "description": "【效果】最终伤害值改变"
   },
   "defense": {
     "prefix": "defense",
-    "body": ">defense | [${1:#目标#},${2:#防御值#}]",
+    "body": ">defense | [${1:#目标#}, ${2:#防御值#}]",
     "description": "【效果】防御值改变"
   },
   "fre": {
@@ -71,7 +71,7 @@
   },
   "costFre": {
     "prefix": "costFre",
-    "body": ">costFre | [${1:#目标#},${2:#抢劫次数消耗#}]",
+    "body": ">costFre | [${1:#目标#}, ${2:#抢劫次数消耗#}]",
     "description": "【效果】本次抢劫次数消耗改变"
   },
   "SeeChaMay": {
@@ -86,7 +86,7 @@
   },
   "pro_get": {
     "prefix": "pro_get",
-    "body": ">pro_get | [${1:#百分比#},${2:#最低获得#},${3:#最高获得#}]",
+    "body": ">pro_get | [${1:#百分比#}, ${2:#最低获得#}, ${3:#最高获得#}]",
     "description": "【效果】百分比获取金币"
   },
   "get_coin": {
@@ -96,7 +96,7 @@
   },
   "get_coin_random": {
     "prefix": "get_coin_random",
-    "body": ">get_coin_random | [${1:#金币数量下限#},${2:#金币数量上限#}]",
+    "body": ">get_coin_random | [${1:#金币数量下限#}, ${2:#金币数量上限#}]",
     "description": "【效果】额外获得范围内金币"
   },
   "AllToAct": {
@@ -106,22 +106,22 @@
   },
   "coinMp": {
     "prefix": "coinMp",
-    "body": ">coinMp | [${1:#额外倍数#},${2:#最低获得#},${3:#最高获得#}]",
+    "body": ">coinMp | [${1:#额外倍数#}, ${2:#最低获得#}, ${3:#最高获得#}]",
     "description": "【效果】金币倍数"
   },
   "loseCoinMp": {
     "prefix": "loseCoinMp",
-    "body": ">loseCoinMp | [${1:#额外倍数#},${2:#最低获得#},${3:#最高获得#}]",
+    "body": ">loseCoinMp | [${1:#额外倍数#}, ${2:#最低获得#}, ${3:#最高获得#}]",
     "description": "【效果】失败金币倍数"
   },
   "toMeCoinMp": {
     "prefix": "toMeCoinMp",
-    "body": ">toMeCoinMp | [${1:#对方对自己的额外倍数#},${2:#最低获得#},${3:#最高获得#}]",
+    "body": ">toMeCoinMp | [${1:#对方对自己的额外倍数#}, ${2:#最低获得#}, ${3:#最高获得#}]",
     "description": "【效果】金币倍数"
   },
   "toMeLoseCoinMp": {
     "prefix": "toMeLoseCoinMp",
-    "body": ">toMeLoseCoinMp | [${1:#对方对自己失败的额外倍数#},${2:#最低获得#},${3:#最高获得#}]",
+    "body": ">toMeLoseCoinMp | [${1:#对方对自己失败的额外倍数#}, ${2:#最低获得#}, ${3:#最高获得#}]",
     "description": "【效果】金币倍数"
   },
   "appendString": {
@@ -151,72 +151,72 @@
   },
   "delBuff": {
     "prefix": "delBuff",
-    "body": ">delBuff | [${1:#目标#},${2:#buff模式#},${3:#附着度要求#},${4:#选择模式#}]",
+    "body": ">delBuff | [${1:#目标#}, ${2:#buff模式#}, ${3:#附着度要求#}, ${4:#选择模式#}]",
     "description": "【效果】删除目标的buff"
   },
   "addBuff": {
     "prefix": "addBuff",
-    "body": ">addBuff | [${1:#目标#},${2:#buff名#},[${3:#附着度#},${4:#是否锁定附着度#},${5:#初始时长#},${6:#持续回合#}]]",
+    "body": ">addBuff | [${1:#目标#}, ${2:#buff名#}, [${3:#附着度#}, ${4:#是否锁定附着度#}, ${5:#初始时长#}, ${6:#持续回合#}]]",
     "description": "【效果】添加buff"
   },
   "expGetPro": {
     "prefix": "expGetPro",
-    "body": ">expGetPro | [${1:#百分比#},${2:#最低获得#},${3:#最高获得#}]",
+    "body": ">expGetPro | [${1:#百分比#}, ${2:#最低获得#}, ${3:#最高获得#}]",
     "description": "【效果】熟练度获取倍率"
   },
   "changeBuffSelf": {
     "prefix": "changeBuffSelf",
-    "body": ">changeBuffSelf | [${1:#目标#},${2:#buff模式#},${3:#附着度要求#},${4:#选择模式#},${5:#改变值#},${6:#属性名#}]",
+    "body": ">changeBuffSelf | [${1:#目标#}, ${2:#buff模式#}, ${3:#附着度要求#}, ${4:#选择模式#}, ${5:#改变值#}, ${6:#属性名#}]",
     "description": "【效果】改变buff的属性"
   },
   "proAW": {
     "prefix": "proAW",
-    "body": ">proAW | [${1:#目标#},${2:#改变比例#},${3:#最低改变量#},${4:#最高改变量#}]",
+    "body": ">proAW | [${1:#目标#}, ${2:#改变比例#}, ${3:#最低改变量#}, ${4:#最高改变量#}]",
     "description": "【效果】比例改变主动权值"
   },
   "proPW": {
     "prefix": "proPW",
-    "body": ">proPW | [${1:#目标#},${2:#改变比例#},${3:#最低改变量#},${4:#最高改变量#}]",
+    "body": ">proPW | [${1:#目标#}, ${2:#改变比例#}, ${3:#最低改变量#}, ${4:#最高改变量#}]",
     "description": "【效果】比例改变被动权值"
   },
   "proAttact": {
     "prefix": "proAttact",
-    "body": ">proAttact | [${1:#目标#},${2:#改变比例#},${3:#最低改变量#},${4:#最高改变量#}]",
+    "body": ">proAttact | [${1:#目标#}, ${2:#改变比例#}, ${3:#最低改变量#}, ${4:#最高改变量#}]",
     "description": "【效果】比例改变攻击力"
   },
   "proTrueAttact": {
     "prefix": "proTrueAttact",
-    "body": ">proTrueAttact | [${1:#目标#},${2:#改变比例#},${3:#最低改变量#},${4:#最高改变量#}]",
+    "body": ">proTrueAttact | [${1:#目标#}, ${2:#改变比例#}, ${3:#最低改变量#}, ${4:#最高改变量#}]",
     "description": "【效果】比例改变最终伤害值"
   },
   "proDefense": {
     "prefix": "proDefense",
-    "body": ">proDefense | [${1:#目标#},${2:#改变比例#},${3:#最低改变量#},${4:#最高改变量#}]",
+    "body": ">proDefense | [${1:#目标#}, ${2:#改变比例#}, ${3:#最低改变量#}, ${4:#最高改变量#}]",
     "description": "【效果】比例改变防御力"
   },
   "proSpeed": {
     "prefix": "proSpeed",
-    "body": ">proSpeed | [${1:#目标#},${2:#改变比例#},${3:#最低改变量#},${4:#最高改变量#}]",
+    "body": ">proSpeed | [${1:#目标#}, ${2:#改变比例#}, ${3:#最低改变量#}, ${4:#最高改变量#}]",
     "description": "【效果】比例改变速度值"
   },
   "addweatherSelfToAW": {
     "prefix": "addweatherSelfToAW",
-    "body": ">addweatherSelfToAW | [${1:#天气属性#},${2:#目标#},${3:#倍率#},${4:#最小量#},${5:#最大量#}]",
+    "body": ">addweatherSelfToAW | [${1:#天气属性#}, ${2:#目标#}, ${3:#倍率#}, ${4:#最小量#}, ${5:#最大量#}]",
     "description": "【效果】将天气属性的值加到主动权值内"
   },
   "addweatherSelfToPW": {
     "prefix": "addweatherSelfToPW",
-    "body": ">addweatherSelfToPW | [${1:#天气属性#},${2:#目标#},${3:#倍率#},${4:#最小量#},${5:#最大量#}]",
+    "body": ">addweatherSelfToPW | [${1:#天气属性#}, ${2:#目标#}, ${3:#倍率#}, ${4:#最小量#}, ${5:#最大量#}]",
     "description": "【效果】将天气属性的值加到被动权值内"
   },
   "miniItemNumChange": {
     "prefix": "miniItemNumChange",
-    "body": ">miniItemNumChange | [${1:#目标#},${2:#小道具名#},${3:#改变数量#}]",
+    "body": ">miniItemNumChange | [${1:#目标#}, ${2:#小道具名#}, ${3:#改变数量#}]",
     "description": "【效果】小道具数量改变"
   },
   "addGselfDvaLevel": {
     "prefix": "addGselfDvaLevel",
-    "body": ">addGselfDvaLevel | [${1:#目标#},${2:#增加量#}]",
+    "body": ">addGselfDvaLevel | [${1:#目标#}, ${2:#增加量#}]",
     "description": "【效果】增加查看属性的偏差等级"
   },
   "noPrCoin": {
@@ -231,37 +231,37 @@
   },
   "addLabelNumToTempNum": {
     "prefix": "addLabelNumToTempNum",
-    "body": ">addLabelNumToTempNum | [${1:#目标#},${2:#标签名#},${3:#临时变量名#}]",
+    "body": ">addLabelNumToTempNum | [${1:#目标#}, ${2:#标签名#}, ${3:#临时变量名#}]",
     "description": "【效果】将目标所有装备的某标签数加到临时变量中"
   },
   "SetNum": {
     "prefix": "SetNum",
-    "body": ">SetNum | [${1:#变量名#},${2:#值#}]",
+    "body": ">SetNum | [${1:#变量名#}, ${2:#值#}]",
     "description": "【效果】设置变量的值"
   },
   "NumAdd": {
     "prefix": "NumAdd",
-    "body": ">NumAdd | [${1:#变量名#},${2:#值#}]",
+    "body": ">NumAdd | [${1:#变量名#}, ${2:#值#}]",
     "description": "【效果】变量增加"
   },
   "NumDec": {
     "prefix": "NumDec",
-    "body": ">NumDec | [${1:#变量名#},${2:#值#}]",
+    "body": ">NumDec | [${1:#变量名#}, ${2:#值#}]",
     "description": "【效果】变量减少"
   },
   "NumMul": {
     "prefix": "NumMul",
-    "body": ">NumMul | [${1:#变量名#},${2:#值#}]",
+    "body": ">NumMul | [${1:#变量名#}, ${2:#值#}]",
     "description": "【效果】变量乘以"
   },
   "NumDiv": {
     "prefix": "NumDiv",
-    "body": ">NumDiv | [${1:#变量名#},${2:#值#}]",
+    "body": ">NumDiv | [${1:#变量名#}, ${2:#值#}]",
     "description": "【效果】变量除以"
   },
   "NumRound": {
     "prefix": "NumRound",
-    "body": ">NumRound | [${1:#变量名#},${2:#值#}]",
+    "body": ">NumRound | [${1:#变量名#}, ${2:#值#}]",
     "description": "【效果】变量保留到小数点后……位"
   },
   "DelNum": {
@@ -271,7 +271,7 @@
   },
   "powerAdd": {
     "prefix": "powerAdd",
-    "body": ">powerAdd | [${1:#目标#},${2:#能量#}]",
+    "body": ">powerAdd | [${1:#目标#}, ${2:#能量#}]",
     "description": "【效果】能量增加"
   },
   "noFreCost": {
@@ -281,32 +281,32 @@
   },
   "numChange-S": {
     "prefix": "numChange-S",
-    "body": ">numChange-S | [${1:#目标#},${2:#变量名#},${3:#改变模式#},${4:#改变量#}]",
+    "body": ">numChange-S | [${1:#目标#}, ${2:#变量名#}, ${3:#改变模式#}, ${4:#改变量#}]",
     "description": "【效果】私有变量改变"
   },
   "newTempNum": {
     "prefix": "newTempNum",
-    "body": ">newTempNum | [${1:#变量名#},${2:#初始值#}]",
+    "body": ">newTempNum | [${1:#变量名#}, ${2:#初始值#}]",
     "description": "【效果】新建临时变量，当整个触发器组运行完毕后就删除"
   },
   "tempNumChange": {
     "prefix": "tempNumChange",
-    "body": ">tempNumChange | [${1:#变量名#},${2:#改变模式#},${3:#改变量#}]",
+    "body": ">tempNumChange | [${1:#变量名#}, ${2:#改变模式#}, ${3:#改变量#}]",
     "description": "【效果】临时变量改变"
   },
   "removeCard": {
     "prefix": "removeCard",
-    "body": ">removeCard | [${1:#目标#},${2:#下标#}]",
+    "body": ">removeCard | [${1:#目标#}, ${2:#下标#}]",
     "description": "【效果】删除今日卡片"
   },
   "setEquUseTime": {
     "prefix": "setEquUseTime",
-    "body": ">setEquUseTime | [${1:#目标#},${2:#装备名#}]",
+    "body": ">setEquUseTime | [${1:#目标#}, ${2:#装备名#}]",
     "description": "【效果】标记装备技能使用时间"
   },
   "hpAdd": {
     "prefix": "hpAdd",
-    "body": ">hpAdd | [${1:#目标#},${2:#改变值#},${3:#是否可在血量为0时触发#}]",
+    "body": ">hpAdd | [${1:#目标#}, ${2:#改变值#}, ${3:#是否可在血量为0时触发#}]",
     "description": "【效果】目标血量改变"
   },
   "changeTime": {
@@ -326,37 +326,37 @@
   },
   "addDeepToAW": {
     "prefix": "addDeepToAW",
-    "body": ">addDeepToAW | [${1:#目标#},${2:#倍率#}]",
+    "body": ">addDeepToAW | [${1:#目标#}, ${2:#倍率#}]",
     "description": "【效果】【BUFF专属】将附着度的值加到主动权值内"
   },
   "decDeepToAW": {
     "prefix": "decDeepToAW",
-    "body": ">decDeepToAW | [${1:#目标#},${2:#倍率#}]",
+    "body": ">decDeepToAW | [${1:#目标#}, ${2:#倍率#}]",
     "description": "【效果】【BUFF专属】将附着度的值减到主动权值内"
   },
   "addDeepToPW": {
     "prefix": "addDeepToPW",
-    "body": ">addDeepToPW | [${1:#目标#},${2:#倍率#}]",
+    "body": ">addDeepToPW | [${1:#目标#}, ${2:#倍率#}]",
     "description": "【效果】【BUFF专属】将附着度的值加到被动权值内"
   },
   "decDeepToPW": {
     "prefix": "decDeepToPW",
-    "body": ">decDeepToPW | [${1:#目标#},${2:#倍率#}]",
+    "body": ">decDeepToPW | [${1:#目标#}, ${2:#倍率#}]",
     "description": "【效果】【BUFF专属】将附着度的值减到被动权值内"
   },
   "addSelfToTempNum": {
     "prefix": "addSelfToTempNum",
-    "body": ">addSelfToTempNum | [${1:#属性名#},${2:#临时变量名#}]",
+    "body": ">addSelfToTempNum | [${1:#属性名#}, ${2:#临时变量名#}]",
     "description": "【效果】【BUFF】将某属性加到临时变量中"
   },
   "PushNewEventToSystem": {
     "prefix": "PushNewEventToSystem",
-    "body": ">PushNewEventToSystem | [${1:#方向#},${2:#延迟时间#},${3:#额外模式},${4:#己方额外触发组#},${5:#敌方额外触发组#}]",
+    "body": ">PushNewEventToSystem | [${1:#方向#}, ${2:#延迟时间#}, ${3:#额外模式}, ${4:#己方额外触发组#}, ${5:#敌方额外触发组#}]",
     "description": "【效果】新增抢劫事件进入系统"
   },
   "ImoprtSgc": {
     "prefix": "ImoprtSgc",
-    "body": ">ImoprtSgc | [${1:#文件名#},${2:#是否允许有相同标签的SugarCode触发组被导入#}]",
+    "body": ">ImoprtSgc | [${1:#文件名#}, ${2:#是否允许有相同标签的SugarCode触发组被导入#}]",
     "description": "【效果】导入SugarCode文件编译并插入到该组触发组之后"
   },
   "pass": {
@@ -386,7 +386,7 @@
   },
   "WeValueDiff2": {
     "prefix": "WeValueDiff2",
-    "body": ">WeValueDiff2 | [${1:int},${2:int}]",
+    "body": ">WeValueDiff2 | [${1:int}, ${2:int}]",
     "description": "【条件】对面等级相对自己要求"
   },
   "randomNum": {
@@ -411,117 +411,117 @@
   },
   "haveBuff": {
     "prefix": "haveBuff",
-    "body": ">haveBuff | [${1:#目标#},${2:#buff名#},${3:T}]",
+    "body": ">haveBuff | [${1:#目标#}, ${2:#buff名#}, ${3:T}]",
     "description": "【条件】某Buff要求"
   },
   "buffLayerNeed": {
     "prefix": "buffLayerNeed",
-    "body": ">buffLayerNeed | [${1:#目标#},${2:#buff名#},${3:#层数要求#},${4:#是否考虑等于情况#}]",
+    "body": ">buffLayerNeed | [${1:#目标#}, ${2:#buff名#}, ${3:#层数要求#}, ${4:#是否考虑等于情况#}]",
     "description": "【条件】buff层数要求"
   },
   "weightNeed": {
     "prefix": "weightNeed",
-    "body": ">weightNeed | [${1:#目标#},${2:#权值#},${3:#数值#},${4:#是否考虑等于情况#}]",
+    "body": ">weightNeed | [${1:#目标#}, ${2:#权值#}, ${3:#数值#}, ${4:#是否考虑等于情况#}]",
     "description": "【条件】权值要求"
   },
   "equNeed": {
     "prefix": "equNeed",
-    "body": ">equNeed | [${1:#目标#},${2:#装备名#},${3:T}]",
+    "body": ">equNeed | [${1:#目标#}, ${2:#装备名#}, ${3:T}]",
     "description": "【条件】装备要求"
   },
   "suitNeed": {
     "prefix": "suitNeed",
-    "body": ">suitNeed | [${1:#目标#},${2:#套装名#},${3:T}]",
+    "body": ">suitNeed | [${1:#目标#}, ${2:#套装名#}, ${3:T}]",
     "description": "【条件】套装要求"
   },
   "weatherNeed": {
     "prefix": "weatherNeed",
-    "body": ">weatherNeed | [${1:#天气名#},${2:T}]",
+    "body": ">weatherNeed | [${1:#天气名#}, ${2:T}]",
     "description": "【条件】天气要求"
   },
   "weatherLabelNeed": {
     "prefix": "weatherLabelNeed",
-    "body": ">weatherLabelNeed | [${1:#标签名#},${2:T}]",
+    "body": ">weatherLabelNeed | [${1:#标签名#}, ${2:T}]",
     "description": "【条件】天气标签要求"
   },
   "weatherSelfNeed": {
     "prefix": "weatherSelfNeed",
-    "body": ">weatherSelfNeed | [${1:#属性名#},${2:#数值#},${3:#运算符#},${4:#是否考虑等于情况#}]",
+    "body": ">weatherSelfNeed | [${1:#属性名#}, ${2:#数值#}, ${3:#运算符#}, ${4:#是否考虑等于情况#}]",
     "description": "【条件】天气某属性要求"
   },
   "preTimeNeed": {
     "prefix": "preTimeNeed",
-    "body": ">preTimeNeed | [${1:#时间段#},${2:T}]",
+    "body": ">preTimeNeed | [${1:#时间段#}, ${2:T}]",
     "description": "【条件】时间段要求"
   },
   "miniItemNeed": {
     "prefix": "miniItemNeed",
-    "body": ">miniItemNeed | [${1:#目标#},${2:#小道具名#},${3:#数量#},${4:#是否考虑等于情况#}]",
+    "body": ">miniItemNeed | [${1:#目标#}, ${2:#小道具名#}, ${3:#数量#}, ${4:#是否考虑等于情况#}]",
     "description": "【条件】小道具要求"
   },
   "powerNeed": {
     "prefix": "powerNeed",
-    "body": ">powerNeed | [${1:#目标#},${2:#要求#},${3:#是否考虑等于情况#}]",
+    "body": ">powerNeed | [${1:#目标#}, ${2:#要求#}, ${3:#是否考虑等于情况#}]",
     "description": "【条件】能量值要求"
   },
   "hpNeed": {
     "prefix": "hpNeed",
-    "body": ">hpNeed | [${1:#目标#},${2:#要求#},${3:#是否考虑等于情况#}]",
+    "body": ">hpNeed | [${1:#目标#}, ${2:#要求#}, ${3:#是否考虑等于情况#}]",
     "description": "【条件】血量值要求"
   },
   "equRuneNeed": {
     "prefix": "equRuneNeed",
-    "body": ">equRuneNeed | [${1:#目标#},${2:#装备名#},${3:#符文词条名#},${4:T}]",
+    "body": ">equRuneNeed | [${1:#目标#}, ${2:#装备名#}, ${3:#符文词条名#}, ${4:T}]",
     "description": "【条件】某装备符文词条要求"
   },
   "equRuneLevelNeed": {
     "prefix": "equRuneLevelNeed",
-    "body": ">equRuneLevelNeed | [${1:#目标#},${2:#装备类型名#},${3:#词条名#},${4:#词条等级要求#},${5:#是否考虑等于情况#}]",
+    "body": ">equRuneLevelNeed | [${1:#目标#}, ${2:#装备类型名#}, ${3:#词条名#}, ${4:#词条等级要求#}, ${5:#是否考虑等于情况#}]",
     "description": "【条件】某装备符文词条等级要求"
   },
   "equRuneStoneNeed": {
     "prefix": "equRuneStoneNeed",
-    "body": ">equRuneStoneNeed | [${1:#目标#},${2:#装备类型名#},${3:#符文石名#},${4:T}]",
+    "body": ">equRuneStoneNeed | [${1:#目标#}, ${2:#装备类型名#}, ${3:#符文石名#}, ${4:T}]",
     "description": "【条件】某装备符文石要求"
   },
   "equLabelNeed": {
     "prefix": "equLabelNeed",
-    "body": ">equLabelNeed | [${1:#目标#},${2:#装备类型名#},${3:#标签名#},${4:T}]",
+    "body": ">equLabelNeed | [${1:#目标#}, ${2:#装备类型名#}, ${3:#标签名#}, ${4:T}]",
     "description": "【条件】某装备标签要求"
   },
   "equLabelNumNeed": {
     "prefix": "equLabelNumNeed",
-    "body": ">equLabelNumNeed | [${1:#目标#},${2:#标签名#},${3:#要求#},${4:#是否考虑等于情况#}]",
+    "body": ">equLabelNumNeed | [${1:#目标#}, ${2:#标签名#}, ${3:#要求#}, ${4:#是否考虑等于情况#}]",
     "description": "【条件】目标装备标签数量要求"
   },
   "TimeNeed": {
     "prefix": "TimeNeed",
-    "body": ">TimeNeed | [${1:#buff持续时间#},${2:T}]",
+    "body": ">TimeNeed | [${1:#buff持续时间#}, ${2:T}]",
     "description": "【条件】【BUFF专属】当前buff持续时间要求"
   },
   "RoundNeed": {
     "prefix": "RoundNeed",
-    "body": ">RoundNeed | [${1:#buff剩余回合#},${2:T}]",
+    "body": ">RoundNeed | [${1:#buff剩余回合#}, ${2:T}]",
     "description": "【条件】【BUFF专属】当前buff剩余回合要求"
   },
   "DeepNeed": {
     "prefix": "DeepNeed",
-    "body": ">DeepNeed | [${1:int},${2:T}]",
+    "body": ">DeepNeed | [${1:int}, ${2:T}]",
     "description": "【条件】【BUFF专属】当前Buff附着度要求"
   },
   "cprNums": {
     "prefix": "cprNums",
-    "body": ">cprNums | [${1:#值1#},${2:#值2#},${3:#运算符#}]",
+    "body": ">cprNums | [${1:#值1#}, ${2:#值2#}, ${3:#运算符#}]",
     "description": "【条件】【BUFF专属】数值比较"
   },
   "fixEquNeed": {
     "prefix": "fixEquNeed",
-    "body": ">fixEquNeed | [${1:#装备名#},${2:T}]",
+    "body": ">fixEquNeed | [${1:#装备名#}, ${2:T}]",
     "description": "【条件】【符文词条专属】(当前词条安装装备要求"
   },
   "fixEquTypeNeed": {
     "prefix": "fixEquTypeNeed",
-    "body": ">fixEquTypeNeed | [${1:#装备类型#},${2:T}]",
+    "body": ">fixEquTypeNeed | [${1:#装备类型#}, ${2:T}]",
     "description": "【条件】【符文词条专属】当前词条安装装备类型要求"
   }
 }
