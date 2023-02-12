@@ -38,8 +38,11 @@ function activate() {
           }
           string += char;
         }
-        console.log(string);
         changes.push(vscode.TextEdit.replace(line.range, string));
+      }
+      let lastLine = document.lineAt(document.lineCount - 1);
+      if (lastLine.text != "") {
+        changes.push(vscode.TextEdit.insert(lastLine.range.end, "\n"));
       }
       return changes;
     },
