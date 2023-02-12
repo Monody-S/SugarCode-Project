@@ -7,7 +7,10 @@
     "vscode": "^1.75.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets",
+    "Formatters",
+    "Other"
   ],
   "main": "./src/extension.js",
   "contributes": {
