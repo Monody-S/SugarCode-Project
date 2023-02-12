@@ -56,15 +56,69 @@
           }
         },
         {
-          "match": "(\")(_(([MA].*)|(temp.*)|(equ[MA](weapon|defend|super_weapon|decorations|medal|engraving))|(other(((my|aim)Name)|([MA]wei2?)))))(\")",
+          "match": "(\")(_[MA])(.+)(\")",
           "captures": {
             "1": {
               "name": "string.quoted.double.SugarCode"
             },
             "2": {
+              "name": "keyword.other.SugarCode"
+            },
+            "3": {
               "name": "variable.other.SugarCode"
             },
-            "13": {
+            "4": {
+              "name": "string.quoted.double.SugarCode"
+            }
+          }
+        },
+        {
+          "match": "(\")(_temp)(.+)(\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.double.SugarCode"
+            },
+            "2": {
+              "name": "keyword.other.SugarCode"
+            },
+            "3": {
+              "name": "variable.other.SugarCode"
+            },
+            "4": {
+              "name": "string.quoted.double.SugarCode"
+            }
+          }
+        },
+        {
+          "match": "(\")(_equ[MA])(weapon|defend|super_weapon|decorations|medal|engraving)(\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.double.SugarCode"
+            },
+            "2": {
+              "name": "keyword.other.SugarCode"
+            },
+            "3": {
+              "name": "variable.other.SugarCode"
+            },
+            "4": {
+              "name": "string.quoted.double.SugarCode"
+            }
+          }
+        },
+        {
+          "match": "(\")(_other)(myName|aimName|[MA]wei2?)(\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.double.SugarCode"
+            },
+            "2": {
+              "name": "keyword.other.SugarCode"
+            },
+            "3": {
+              "name": "variable.other.SugarCode"
+            },
+            "4": {
               "name": "string.quoted.double.SugarCode"
             }
           }
