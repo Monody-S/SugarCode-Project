@@ -11,9 +11,69 @@
       "end": "#",
       "name": "comment.block.SugarCode"
     },
+    "variable": {
+      "patterns": [
+        {
+          "match": "(\"<)([a-zA-Z_][a-zA-Z0-9_]*)(>\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.double.SugarCode"
+            },
+            "2": {
+              "name": "variable.other.SugarCode"
+            },
+            "3": {
+              "name": "string.quoted.double.SugarCode"
+            }
+          }
+        },
+        {
+          "match": "(\"\\[)([a-zA-Z_][a-zA-Z0-9_]*)(\\]\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.double.SugarCode"
+            },
+            "2": {
+              "name": "variable.other.SugarCode"
+            },
+            "3": {
+              "name": "string.quoted.double.SugarCode"
+            }
+          }
+        },
+        {
+          "match": "(\"{)([a-zA-Z_][a-zA-Z0-9_]*)(}\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.double.SugarCode"
+            },
+            "2": {
+              "name": "variable.other.SugarCode"
+            },
+            "3": {
+              "name": "string.quoted.double.SugarCode"
+            }
+          }
+        },
+        {
+          "match": "(\")(_(([MA].*)|(temp.*)|(equ[MA](weapon|defend|super_weapon|decorations|medal|engraving))|(other(((my|aim)Name)|([MA]wei2?)))))(\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.double.SugarCode"
+            },
+            "2": {
+              "name": "variable.other.SugarCode"
+            },
+            "13": {
+              "name": "string.quoted.double.SugarCode"
+            }
+          }
+        }
+      ]
+    },
     "number": {
-      "match": "(?x)-?(?:0|[1-9]\\d*)(?:(?:\\.\\d+)?(?:[eE][+-]?\\d+)?)?",
-      "name": "constant.numeric.json"
+      "match": "-?\\b\\d+(\\.\\d+)?",
+      "name": "constant.numeric.SugarCode"
     },
     "string": {
       "begin": "\"",
@@ -21,23 +81,12 @@
       "name": "string.quoted.double.SugarCode",
       "patterns": [
         {
-          "include": "#stringcontent"
-        }
-      ]
-    },
-    "stringcontent": {
-      "patterns": [
-        {
-          "match": "(?x)\\\\(?:[\"\\\\/bfnrt]|u[0-9a-fA-F]{4})",
-          "name": "constant.character.escape.json"
+          "match": "\\\\[\"\\\\/bfnrt]",
+          "name": "constant.character.escape.SugarCode"
         },
         {
-          "match": "<.*>",
-          "name": "constant.character.escape.json"
-        },
-        {
-          "match": "\\\\.",
-          "name": "invalid.illegal.unrecognized-string-escape.json"
+          "match": "<n>",
+          "name": "constant.character.escape.SugarCode"
         }
       ]
     },
@@ -46,7 +95,7 @@
       "name": "constant.language.SugarCode"
     },
     "function": {
-      "match": "(>)(.*)(\\|)",
+      "match": "(>)(min_coin|max_coin|act_weight|pass_weight|Aact_weight|Apass_weight|speed|attact|trueAttact|defense|fre|costFre|SeeChaMay|SeeCha|pro_get|get_coin|get_coin_random|AllToAct|coinMp|loseCoinMp|toMeCoinMp|toMeLoseCoinMp|appendString|appendString2|endAll|endNumber|minCoin|delBuff|addBuff|expGetPro|changeBuffSelf|proAW|proPW|proAttact|proTrueAttact|proDefense|proSpeed|addweatherSelfToAW|addweatherSelfToPW|miniItemNumChange|addGselfDvaLevel|noPrCoin|canNotCountinue|addLabelNumToTempNum|SetNum|NumAdd|NumDec|NumMul|NumDiv|NumRound|DelNum|powerAdd|noFreCost|numChange-S|newTempNum|tempNumChange|removeCard|setEquUseTime|hpAdd|changeTime|changeRound|changeDeep|addDeepToAW|decDeepToAW|addDeepToPW|decDeepToPW|addSelfToTempNum|PushNewEventToSystem|ImoprtSgc|aim_lv|aim_pro|aim_coin|WeValueDiff|WeValueDiff2|randomNum|proba|needMode|attactModeNeed|minCoin|haveBuff|buffLayerNeed|weightNeed|equNeed|suitNeed|weatherNeed|weatherLabelNeed|weatherSelfNeed|preTimeNeed|miniItemNeed|powerNeed|hpNeed|equRuneNeed|equRuneLevelNeed|equRuneStoneNeed|equLabelNeed|equLabelNumNeed|TimeNeed|RoundNeed|DeepNeed|cprNums|fixEquNeed|fixEquTypeNeed|pass)\\s*(\\|)",
       "captures": {
         "1": {
           "name": "keyword.other.SugarCode"
@@ -63,6 +112,9 @@
       "patterns": [
         {
           "include": "#comment"
+        },
+        {
+          "include": "#variable"
         },
         {
           "include": "#number"
