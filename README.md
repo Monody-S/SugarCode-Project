@@ -1,5 +1,5 @@
 # SugarCode-Project
-SugarCode-Project是一系列有关SugarCode的库的集合，旨在构建一个数据系统，减轻数据编写的负担。
+SugarCode-Project是一系列有关SugarCode的库的集合，旨在构建一个船新的数据系统，减轻数据编写的负担。
 
 当然，目前SugarCode主要用于SugarBot的开发和维护工作。
 - SugarCode-Python
