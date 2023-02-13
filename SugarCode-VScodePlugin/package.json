@@ -1,7 +1,7 @@
-{
+﻿{
   "name": "sugarcode",
   "displayName": "SugarCode",
-  "description": "MED+梦龙是RBQ",
+  "description": "MRS == RBQ",
   "version": "1.1.4",
   "engines": {
     "vscode": "^1.75.0"
