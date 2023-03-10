@@ -12,8 +12,7 @@ jobs:
     steps:
       - name: Change dir
         run:
-          ls &&
-          cd SugarCode-Project/SugarCode-VScodePlugin/
+          ls
           
       - uses: actions/checkout@v2
       - run: npm install
