@@ -10,21 +10,15 @@ jobs:
     name: npm install
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: npm install
-        uses: actions/npm@master
-        with:
-          args: install --unsafe-perm
-      - name: Master
-        uses: actions/bin/filter@master
-        with:
-          args: branch master
+      - uses: actions/checkout@v2
+      - run: npm install
+      
       - name: Change dir
         run:
           cd SugarCode-VScodePlugin/
-      - name: Vscode release plugin
-        uses: JCofman/vscodeaction@master
-        env:
-          PUBLISHER_TOKEN: ${{ secrets.PUBLISHER_TOKEN }}
+          
+      - uses: lannonbr/vsce-action@3.0.0
         with:
-          args: publish -p $PUBLISHER_TOKEN
+          args: "publish -p $VSCE_TOKEN"
+        env:
+          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
