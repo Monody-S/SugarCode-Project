@@ -10,11 +10,11 @@ jobs:
     name: npm install
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Change dir
         run:
-          ls
-          
-      - uses: actions/checkout@v2
+          ls &&
+          cd SugarCode-VScodePlugin/
       - run: npm install
           
       - uses: lannonbr/vsce-action@3.0.0
