@@ -13,8 +13,6 @@
     "Other"
   ],
   "publisher": "MRSlouu",
-  "main": "./src/extension.js",
-  "activationEvents": [],
   "icon": "https://raw.githubusercontent.com/Monody-S/SugarCode-Project/main/SugarCode-VScodePlugin/icon.png",
   "contributes": {  
     "languages": [
