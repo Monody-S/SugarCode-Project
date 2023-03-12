@@ -1,10 +1,10 @@
 {
   "name": "sugarcode",
   "displayName": "SugarCode",
-  "description": "SugarCode language extension by montmorillonite",
-  "version": "23.02.13",
+  "description": "SugarCode的VS Code插件",
+  "version": "1.1.4",
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^1.78.0"
   },
   "categories": [
     "Programming Languages",
@@ -12,7 +12,7 @@
     "Formatters",
     "Other"
   ],
-  "publisher": "MRSlouu",
+  "publisher": "一块蒙脱石",
   "icon": "https://raw.githubusercontent.com/Monody-S/SugarCode-Project/main/SugarCode-VScodePlugin/icon.png",
   "contributes": {  
     "languages": [
