@@ -8,5 +8,3 @@ SugarCode-Project是一系列有关SugarCode的库的集合，旨在减轻数据
 SugarCode的基于Python的“编译器”，用于编译和反编译SugarCode（详见[SugarCode-Python/README.md](https://github.com/Monody-S/SugarCode-Project/blob/main/SugarCode-Python/README.md)）。
 ## SugarCode-VScodePlugin
 SugarCode的VSCode插件，用于编写SugarCode（详见[SugarCode-VScodePlugin/README.md](https://github.com/Monody-S/SugarCode-Project/blob/main/SugarCode-VScodePlugin/README.md)）。
-## sugarcode.zip
-SugarCode的VSCode插件包。
