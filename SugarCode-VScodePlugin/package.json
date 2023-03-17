@@ -4,7 +4,7 @@
   "description": "SugarCode的VS Code插件",
   "version": "1.1.4",
   "engines": {
-    "vscode": "^1.78.0"
+    "vscode": "^1.74.0"
   },
   "categories": [
     "Programming Languages",
