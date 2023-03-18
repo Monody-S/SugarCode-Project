@@ -8,19 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2.5.4
+        uses: actions/checkout@v2
         with:
           submodules: 'recursive'
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.5.2
-        with:
-          node-version: '16.x'
       - name: Compress SugarCode-VScodePlugin
         run: |
           cd SugarCode-VScodePlugin
           zip -r ../sugarcode.zip .
       - name: Upload artifact
-        uses: actions/upload-artifact@v2.2.6
+        uses: actions/upload-artifact@v2
         with:
           name: sugarcode
           path: sugarcode.zip
