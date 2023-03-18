@@ -149,16 +149,10 @@
       "name": "constant.language.SugarCode"
     },
     "function": {
-      "match": "(>)(min_coin|max_coin|act_weight|pass_weight|Aact_weight|Apass_weight|speed|attact|trueAttact|defense|fre|costFre|SeeChaMay|SeeCha|pro_get|get_coin|get_coin_random|AllToAct|coinMp|loseCoinMp|toMeCoinMp|toMeLoseCoinMp|appendString|appendString2|endAll|endNumber|minCoin|delBuff|addBuff|expGetPro|changeBuffSelf|proAW|proPW|proAttact|proTrueAttact|proDefense|proSpeed|addweatherSelfToAW|addweatherSelfToPW|miniItemNumChange|addGselfDvaLevel|noPrCoin|canNotCountinue|addLabelNumToTempNum|SetNum|NumAdd|NumDec|NumMul|NumDiv|NumRound|DelNum|powerAdd|noFreCost|numChange-S|newTempNum|tempNumChange|removeCard|setEquUseTime|hpAdd|changeTime|changeRound|changeDeep|addDeepToAW|decDeepToAW|addDeepToPW|decDeepToPW|addSelfToTempNum|PushNewEventToSystem|ImoprtSgc|aim_lv|aim_pro|aim_coin|WeValueDiff|WeValueDiff2|randomNum|proba|needMode|attactModeNeed|minCoin|haveBuff|buffLayerNeed|weightNeed|equNeed|suitNeed|weatherNeed|weatherLabelNeed|weatherSelfNeed|preTimeNeed|miniItemNeed|powerNeed|hpNeed|equRuneNeed|equRuneLevelNeed|equRuneStoneNeed|equLabelNeed|equLabelNumNeed|TimeNeed|RoundNeed|DeepNeed|cprNums|fixEquNeed|fixEquTypeNeed|pass)\\s*(\\|)",
+      "match": ">(min_coin|max_coin|act_weight|pass_weight|Aact_weight|Apass_weight|speed|attact|trueAttact|defense|fre|costFre|SeeChaMay|SeeCha|pro_get|get_coin|get_coin_random|AllToAct|coinMp|loseCoinMp|toMeCoinMp|toMeLoseCoinMp|appendString|appendString2|endAll|endNumber|minCoin|delBuff|addBuff|expGetPro|changeBuffSelf|proAW|proPW|proAttact|proTrueAttact|proDefense|proSpeed|addweatherSelfToAW|addweatherSelfToPW|miniItemNumChange|addGselfDvaLevel|noPrCoin|canNotCountinue|addLabelNumToTempNum|SetNum|NumAdd|NumDec|NumMul|NumDiv|NumRound|DelNum|powerAdd|noFreCost|numChange-S|newTempNum|tempNumChange|removeCard|setEquUseTime|hpAdd|changeTime|changeRound|changeDeep|addDeepToAW|decDeepToAW|addDeepToPW|decDeepToPW|addSelfToTempNum|PushNewEventToSystem|ImoprtSgc|aim_lv|aim_pro|aim_coin|WeValueDiff|WeValueDiff2|randomNum|proba|needMode|attactModeNeed|minCoin|haveBuff|buffLayerNeed|weightNeed|equNeed|suitNeed|weatherNeed|weatherLabelNeed|weatherSelfNeed|preTimeNeed|miniItemNeed|powerNeed|hpNeed|equRuneNeed|equRuneLevelNeed|equRuneStoneNeed|equLabelNeed|equLabelNumNeed|TimeNeed|RoundNeed|DeepNeed|cprNums|fixEquNeed|fixEquTypeNeed|pass)\\s*\\|",
       "captures": {
         "1": {
-          "name": "keyword.other.SugarCode"
-        },
-        "2": {
           "name": "support.function.SugarCode"
-        },
-        "3": {
-          "name": "keyword.other.SugarCode"
         }
       }
     },
