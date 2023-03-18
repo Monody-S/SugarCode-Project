@@ -1,0 +1,22 @@
+name: Compress SugarCode-VScodePlugin
+on:
+  push:
+    paths:
+      - 'SugarCode-VScodePlugin/**'
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+      - name: Compress SugarCode-VScodePlugin
+        run: |
+          cd SugarCode-VScodePlugin
+          zip -r ../sugarcode.zip .
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: sugarcode
+          path: sugarcode.zip
