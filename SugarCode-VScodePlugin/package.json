@@ -16,7 +16,7 @@
   "activationEvents": [],
   "main": "./src/extension.js",
   "publisher": "MRSlouu",
-  "icon": "./images/icon.png",
+  "icon": "images/icon.png",
   "contributes": {
     "languages": [
       {
