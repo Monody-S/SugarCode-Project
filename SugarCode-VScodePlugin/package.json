@@ -1,0 +1,47 @@
+{
+  "name": "sugarcode",
+  "displayName": "SugarCode",
+  "description": "SugarCode的VS Code插件 by 一块蒙脱石",
+  "version": "1.1.4",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Formatters",
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "publisher": "MRSlouu",
+  "icon": "https://raw.githubusercontent.com/Monody-S/SugarCode-Project/main/SugarCode-VScodePlugin/icon.png",
+  "contributes": {
+    "languages": [
+      {
+        "id": "SugarCode",
+        "extensions": [
+          ".sgc"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icon.png",
+          "dark": "./icon.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "SugarCode",
+        "scopeName": "text.SugarCode",
+        "path": "./syntaxes/SugarCode.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "SugarCode",
+        "path": "./snippets/SugarCode.code-snippets"
+      }
+    ]
+  }
+}
