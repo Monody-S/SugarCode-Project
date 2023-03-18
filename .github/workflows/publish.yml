@@ -17,7 +17,9 @@ jobs:
           node-version: '16.x'
       - name: Install dependencies
         run: npm install
+        working-directory: SugarCode-VScodePlugin
       - name: Publish extension
         run: npx vsce publish -p ${{ secrets.VSCE_TOKEN }}
+        working-directory: SugarCode-VScodePlugin
         env:
           NODE_AUTH_TOKEN: ${{ secrets.VSCE_TOKEN }}
