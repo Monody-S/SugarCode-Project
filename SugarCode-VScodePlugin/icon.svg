@@ -1,16 +1,1 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1800" height="1800">
-  <defs>
-    <linearGradient id="green" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color: #54cb7b;" />
-      <stop offset="100%" style="stop-color: #c4eb7e;" />
-    </linearGradient>
-    <linearGradient id="blue" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color: #00baf9;" />
-      <stop offset="100%" style="stop-color: #0164ea;" />
-    </linearGradient>
-  </defs>
-  <g>
-    <polygon fill="url(#green)" points="608,338 1217,75 1201,414 749,551 691,1038 863,986 604,1185" />
-    <polygon fill="url(#blue)" points="604,1392 588,1734 1199,1471 1203,620 943,822 1115,770 1056,1255" />
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1800"><defs><linearGradient id="a" x1="0%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#54cb7b"/><stop offset="100%" stop-color="#c4eb7e"/></linearGradient><linearGradient id="b" x1="0%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#00baf9"/><stop offset="100%" stop-color="#0164ea"/></linearGradient></defs><path fill="url(#a)" stroke="#0b910b" d="m608 338 609-263-16 339-452 137-58 487 172-52-259 199z"/><path fill="url(#b)" stroke="#002ffe" d="m604 1392-16 342 611-263 4-851-260 202 172-52-59 485z"/></svg>
