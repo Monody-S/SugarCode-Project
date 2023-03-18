@@ -15,7 +15,7 @@
   "activationEvents": [],
   "main": "./src/extension.js",
   "publisher": "MRSlouu",
-  "icon": "https://raw.githubusercontent.com/Monody-S/SugarCode-Project/main/SugarCode-VScodePlugin/icon.png",
+  "icon": "./icon.png",
   "contributes": {
     "languages": [
       {
@@ -43,5 +43,9 @@
         "path": "./snippets/SugarCode.code-snippets"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Monody-S/SugarCode-Project.git"
   }
 }
