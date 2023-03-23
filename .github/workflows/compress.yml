@@ -19,5 +19,6 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
-          git commit -m "[auto] zip SugarCode-VScodePlugin" -a || exit 0
+          git add sugarcode.zip
+          git commit -m "[auto] zip SugarCode-VScodePlugin" || exit 0
           git push
