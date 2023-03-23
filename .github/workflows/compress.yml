@@ -1,4 +1,4 @@
-name: Compress SugarCode-VScodePlugin
+name: Compress
 on:
   push:
     paths:
@@ -11,14 +11,13 @@ jobs:
         uses: actions/checkout@v2.4.2
         with:
           submodules: "recursive"
-      - name: Compress SugarCode-VScodePlugin
+      - name: Compress
         run: |
           cd SugarCode-VScodePlugin
           zip -r ../sugarcode.zip .
-      - name: Commit SugarCode-VScodePlugin
+      - name: Commit
         run: |
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
-          git add sugarcode.zip
-          git commit -m "[auto] zip SugarCode-VScodePlugin" || exit 0
+          git commit -m "[auto] sugarcode.zip" -a
           git push
