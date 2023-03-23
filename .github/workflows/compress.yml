@@ -2,7 +2,7 @@ name: Compress SugarCode-VScodePlugin
 on:
   push:
     paths:
-      - 'SugarCode-VScodePlugin/**'
+      - "SugarCode-VScodePlugin/**"
 jobs:
   compress:
     runs-on: ubuntu-latest
@@ -10,13 +10,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2.4.2
         with:
-          submodules: 'recursive'
+          submodules: "recursive"
       - name: Compress SugarCode-VScodePlugin
         run: |
           cd SugarCode-VScodePlugin
           zip -r ../sugarcode.zip .
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2.2.4
-        with:
-          name: sugarcode
-          path: sugarcode.zip
+      - name: Commit SugarCode-VScodePlugin
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git commit -m "[auto] zip SugarCode-VScodePlugin" -a || exit 0
+          git push
