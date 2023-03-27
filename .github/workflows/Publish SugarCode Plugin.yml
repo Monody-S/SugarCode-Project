@@ -17,6 +17,7 @@ jobs:
           node-version: 16.x
       - name: Install dependencies
         run: npm install
+        working-directory: Plugins/SugarCode
       - name: Publish extension
         run: npx vsce publish -p ${{ secrets.VSCE_TOKEN }}
         working-directory: Plugins/SugarCode
