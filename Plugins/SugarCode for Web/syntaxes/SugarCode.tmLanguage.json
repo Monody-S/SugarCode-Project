@@ -107,7 +107,7 @@
           }
         },
         {
-          "match": "(\")(_other)(myName|aimName|[MA]wei2?)(\")",
+          "match": "(\")(_other)(Gname|Nname|Uin|myName|aimName|[MA]wei2?)(\")",
           "captures": {
             "1": {
               "name": "string.quoted.double.SugarCode"
@@ -119,6 +119,66 @@
               "name": "variable.other.SugarCode"
             },
             "4": {
+              "name": "string.quoted.double.SugarCode"
+            }
+          }
+        },
+        {
+          "match": "(\")(_user|_group)(.*)(\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.double.SugarCode"
+            },
+            "2": {
+              "name": "keyword.other.SugarCode"
+            },
+            "3": {
+              "name": "variable.other.SugarCode"
+            },
+            "4": {
+              "name": "string.quoted.double.SugarCode"
+            }
+          }
+        },
+        {
+          "match": "(\")(_random)(-?\\d+),(-?\\d+)(\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.double.SugarCode"
+            },
+            "2": {
+              "name": "keyword.other.SugarCode"
+            },
+            "3": {
+              "name": "constant.numericr.SugarCode"
+            },
+            "4": {
+              "name": "constant.numeric.SugarCode"
+            },
+            "5": {
+              "name": "string.quoted.double.SugarCode"
+            }
+          }
+        },
+        {
+          "match": "(\")(_input)(-?\\d+),(-?\\d+),(-?\\d+)(\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.double.SugarCode"
+            },
+            "2": {
+              "name": "keyword.other.SugarCode"
+            },
+            "3": {
+              "name": "constant.numeric.SugarCode"
+            },
+            "4": {
+              "name": "constant.numeric.SugarCode"
+            },
+            "5": {
+              "name": "constant.numeric.SugarCode"
+            },
+            "6": {
               "name": "string.quoted.double.SugarCode"
             }
           }
@@ -149,7 +209,7 @@
       "name": "constant.language.SugarCode"
     },
     "function": {
-      "match": ">(min_coin|max_coin|act_weight|pass_weight|Aact_weight|Apass_weight|speed|attact|trueAttact|defense|fre|costFre|SeeChaMay|SeeCha|pro_get|get_coin|get_coin_random|AllToAct|coinMp|loseCoinMp|toMeCoinMp|toMeLoseCoinMp|appendString|appendString2|endAll|endNumber|minCoin|delBuff|addBuff|expGetPro|changeBuffSelf|proAW|proPW|proAttact|proTrueAttact|proDefense|proSpeed|addweatherSelfToAW|addweatherSelfToPW|miniItemNumChange|addGselfDvaLevel|noPrCoin|canNotCountinue|addLabelNumToTempNum|SetNum|NumAdd|NumDec|NumMul|NumDiv|NumRound|DelNum|powerAdd|noFreCost|numChange-S|newTempNum|tempNumChange|removeCard|setEquUseTime|hpAdd|changeTime|changeRound|changeDeep|addDeepToAW|decDeepToAW|addDeepToPW|decDeepToPW|addSelfToTempNum|PushNewEventToSystem|ImoprtSgc|aim_lv|aim_pro|aim_coin|WeValueDiff|WeValueDiff2|randomNum|proba|needMode|attactModeNeed|minCoin|haveBuff|buffLayerNeed|weightNeed|equNeed|suitNeed|weatherNeed|weatherLabelNeed|weatherSelfNeed|preTimeNeed|miniItemNeed|powerNeed|hpNeed|equRuneNeed|equRuneLevelNeed|equRuneStoneNeed|equLabelNeed|equLabelNumNeed|TimeNeed|RoundNeed|DeepNeed|cprNums|fixEquNeed|fixEquTypeNeed|pass)\\s*\\|",
+      "match": ">(aim_lv|aim_pro|aim_coin|WeValueDiff|WeValueDiff2|randomNum|proba|needMode|attactModeNeed|minCoin|haveBuff|buffLayerNeed|weightNeed|equNeed|suitNeed|weatherNeed|weatherLabelNeed|weatherSelfNeed|preTimeNeed|miniItemNeed|powerNeed|hpNeed|equRuneNeed|equRuneLevelNeed|equRuneStoneNeed|equLabelNeed|equLabelNumNeed|TimeNeed|RoundNeed|DeepNeed|cprNums|checkTempString|fixEquNeed|fixEquTypeNeed|pass|min_coin|max_coin|act_weight|pass_weight|Aact_weight|Apass_weight|speed|attact|trueAttact|defense|fre|costFre|SeeChaMay|SeeCha|pro_get|get_coin|get_coin_random|AllToAct|coinMp|loseCoinMp|toMeCoinMp|toMeLoseCoinMp|appendString|appendString2|endAll|endNumber|minCoin|delBuff|addBuff|expGetPro|changeBuffSelf|proAW|proPW|proAttact|proTrueAttact|proDefense|proSpeed|addweatherSelfToAW|addweatherSelfToPW|miniItemNumChange|addGselfDvaLevel|noPrCoin|canNotCountinue|addLabelNumToTempNum|SetNum|NumAdd|NumDec|NumMul|NumDiv|NumRound|DelNum|powerAdd|noFreCost|numChange-S|newTempNum|tempNumChange|addEquRuneLevelToTN|newTempString|tempStringSlic|tempStringAppend|tempStringAppend2|tempStringMbi|appendEquNameToTs|addTsSizeToTn|apStrToSelfString|apDigitToSelfString|apProBarToSelfString|apBalBarToSelfString|removeCard|setEquUseTime|hpAdd|hpMaxAdd|changeTime|changeRound|changeDeep|addDeepToAW|decDeepToAW|addDeepToPW|decDeepToPW|addSelfToTempNum|PushNewEventToSystem|ImoprtSgc|pass|checkStart|checkEnd|checkSize|checkMsg|checkKeyword|randomNum|proba|cprNums|isDigit|append|append2|finish|slic|newTempNum|toTempDigit|tempNumChange|userNumChange|groupNumChange|skip)\\s*\\|",
       "captures": {
         "1": {
           "name": "support.function.SugarCode"

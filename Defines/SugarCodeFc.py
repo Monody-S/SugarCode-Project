@@ -1,5 +1,6 @@
 """
 SugarCode的效果库与条件库
+(抢劫版)
 """
 trigs = {
     "min_coin": {"介绍": "(最低金币，int)", "参数": ["int"]},
@@ -55,12 +56,29 @@ trigs = {
     "DelNum": {"介绍": "(删除变量,(str))", "参数": ["str"]},
     "powerAdd": {"介绍": "能量增加((目标(0我1敌)),int)", "参数": ["int", "int"]},
     "noFreCost": {"介绍": "(本次抢劫不消耗次数,bool)", "参数": ["bool"]},
+
     "numChange-S": {"介绍": "(私有变量改变[int,str,int,float](目标，变量名，改变模式[0-保留……位小数 1-加 2-减 3-乘 4-除 5-取余 6-次方 7-整除 8-开方 9-赋值 10-取较大 11-取较小]，改变量))", "参数": ["int", "str", "int", "float"]},
     "newTempNum": {"介绍": "(新建临时变量，当整个触发器组运行完毕后就删除,[str,int](变量名，初始值))", "参数": ["str", "int"]},
     "tempNumChange": {"介绍": "(临时变量改变,[str,int,float](变量名，改变模式[0-保留……位小数 1-加 2-减 3-乘 4-除 5-取余 6-次方 7-整除 8-开方 9-赋值 10-取较大 11-取较小]，改变量))", "参数": ["str", "int", "float"]},
+    "addEquRuneLevelToTN": {"介绍": "(将某装备符文词条等级添加到临时变量里,[int,str,str,str](目标,装备类型名,词条名,临时变量名))", "参数": ["int", "str", "str", "str"]},
+
+    "newTempString": {"介绍": "(新建临时字符串，当整个触发器组运行完毕后就删除,[str,str](变量名，初始字符))", "参数": ["str", "str"]},
+    "tempStringSlic": {"介绍": "(临时字符串切片，与Python切片格式一致,[str,int,int,int](变量名，起始下标，终止下标，步长))", "参数": ["str", "int", "int", "int"]},
+    "tempStringAppend": {"介绍": "(临时字符串追加,在字符串后追加内容,[str,str](变量名，内容))", "参数": ["str", "str"]},
+    "tempStringAppend2": {"介绍": "(临时字符串追加,在字符串后追加数值,[str,float](变量名，数值))", "参数": ["str", "int"]},
+    "tempStringMbi": {"介绍": "(临时字符串自乘(翻倍),[str,int](变量名，数值))", "参数": ["str", "int"]},
+    "appendEquNameToTs": {"介绍": "(将用户的装备名追加到临时字符串之后,[int,str,str](目标,变量名,装备类型))", "参数": ["int", "str", "str"]},
+    "addTsSizeToTn": {"介绍": "(将临时字符串的长度添加到临时变量之中,[str,str](字符串名，变量名))", "参数": ["str", "str"]},
+
+    "apStrToSelfString": {"介绍": "(将字符串追加到自己属性显示框,[str](字符串))", "参数": ["str"]},
+    "apDigitToSelfString": {"介绍": "(将数字追加到自己属性显示框,[str](字符串))", "参数": ["float"]},
+    "apProBarToSelfString": {"介绍": "(将浮点数[0~1]做成进度条追加到自己属性显示框,[str](字符串))", "参数": ["float"]},
+    "apBalBarToSelfString": {"介绍": "(将两个数值做成平衡条追加到自己属性显示框,[str](字符串))", "参数": ["float", "float"]},
+
     "removeCard": {"介绍": "删除今日卡片,(目标,下标)", "参数": ["int", "int"]},
     "setEquUseTime": {"介绍": "标记装备技能使用时间(目标，装备名)", "参数": ["int", "str"]},
     "hpAdd": {"介绍": "目标血量改变,(目标,改变值,是否可在血量为0时触发),[int,int,bool]", "参数": ["int", "int", "bool"]},
+    "hpMaxAdd": {"介绍": "目标血量上限改变,(目标,改变值),[int,int,bool]", "参数": ["int", "int", "bool"]},
 
     "changeTime": {"介绍": "BUFF专属 (当前buff时间改变…,int)", "参数": ["int"]},
     "changeRound": {"介绍": "BUFF专属 (当前buff回合改变…,int)", "参数": ["int"]},
@@ -95,8 +113,8 @@ needs = {
     "haveBuff": {"介绍": "(某Buff要求,[int,str,bool],(目标(0为自己，1为对方),buffId,True为有，False为没有))", "参数": ["int", "str", "bool"]},
     "buffLayerNeed": {"介绍": "(buff层数要求,[int,str,int,bool],(目标,buffID,层数要求(正为大于,负为小于),是否考虑等于情况))", "参数": ["int", "str", "int", "bool"]},
     "weightNeed": {"介绍": "(调用该触发器时，权值要求,[int,int,float,bool],(目标(0为自己,1为对方),权值(0为主动,1为被动),数值要求(正为大于，负为低于),是否考虑等于情况))", "参数": ["int", "int", "float", "bool"]},
-    "equNeed": {"介绍": "(装备要求,[int,str,bool],(目标(0为自己,1为对方),装备名,(True为已装备,False为没装备)))", "参数": ["str", "bool"]},
-    "suitNeed": {"介绍": "(套装要求,[int,str,bool],(目标(0为自己,1为对方),装备名,(True为已装备,False为没装备)))", "参数": ["str", "bool"]},
+    "equNeed": {"介绍": "(装备要求,[int,str,bool],(目标(0为自己,1为对方),装备名,(True为已装备,False为没装备)))", "参数": ["int", "str", "bool"]},
+    "suitNeed": {"介绍": "(套装要求,[int,str,bool],(目标(0为自己,1为对方),装备名,(True为已装备,False为没装备)))", "参数": ["int", "str", "bool"]},
     "weatherNeed": {"介绍": "(天气要求,[str,bool],(天气名id(天气名),要求处于该天气为……))", "参数": ["str", "bool"]},
     "weatherLabelNeed": {"介绍": "(天气标签要求,[str,bool],(标签名，持有该标签为……))", "参数": ["str", "bool"]},
     "weatherSelfNeed": {"介绍": "(天气某属性要求,[str,int,int,bool],(属性名,数值,1-大于/2-小于,是否考虑等于))", "参数": ["str", "int", "int", "bool"]},
@@ -115,6 +133,8 @@ needs = {
     "RoundNeed": {"介绍": "BUFF专属 (当前buff剩余回合要求……(正为高于，负为低于),[int,bool])", "参数": ["int", "bool"]},
     "DeepNeed": {"介绍": "BUFF专属 (当前Buff附着度要求……(正为高于，负为低于),[int,bool])", "参数": ["int", "bool"]},
     "cprNums": {"介绍": "BUFF专属 (数值比较,[float,float,int](值1，值2，0-小于/1-等于/2-大于/3-小于等于/4-大于等于/5-不等于))", "参数": ["float", "float", "int"]},
+
+    "checkTempString": {"介绍": "(判断字符串的内容是否与目标字符串一致,[str,str](字符串，目标字符串))", "参数": ["str", "str"]},
 
     "fixEquNeed": {"介绍": "符文词条专属 (当前词条安装装备要求……(装备名,是/否),[str,bool])", "参数": ["str", "bool"]},
     "fixEquTypeNeed": {"介绍": "符文词条专属 (当前词条安装装备类型要求……(装备类型,是/否),[str,bool])", "参数": ["str", "bool"]},

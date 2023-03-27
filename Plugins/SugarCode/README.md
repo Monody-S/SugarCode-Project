@@ -1,4 +1,4 @@
-# 该目录为SugarCode的Python编译与反编译代码
+# SugarCode
 
 **注：SugarCode更准确来说是一种数据存储格式，这样的格式在写例如触发组、背包这样的功能时会更方便**
 

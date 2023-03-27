@@ -126,12 +126,12 @@
   },
   "appendString": {
     "prefix": "appendString",
-    "body": ">appendString | \"${1:<n>MED+迷梦龙是RBQ}\"",
+    "body": ">appendString | \"${1:字符串}\"",
     "description": "【效果】在抢劫消息后追加文字"
   },
   "appendString2": {
     "prefix": "appendString2",
-    "body": ">appendString2 | ${1:114}",
+    "body": ">appendString2 | ${1:#数字#}",
     "description": "【效果】在抢劫消息后追加数字"
   },
   "endAll": {
@@ -226,7 +226,7 @@
   },
   "canNotCountinue": {
     "prefix": "canNotCountinue",
-    "body": ">canNotCountinue | \"${1:#提示内容#}\"",
+    "body": ">canNotCountinue | \"${1:提示内容}\"",
     "description": "【效果】终止该轮抢劫并提示"
   },
   "addLabelNumToTempNum": {
@@ -512,7 +512,7 @@
   "cprNums": {
     "prefix": "cprNums",
     "body": ">cprNums | [${1:#值1#},${2:#值2#},${3:#运算符#}]",
-    "description": "【条件】【BUFF专属】数值比较"
+    "description": "【条件】【BUFF专属】数值比较【小于|等于|大于|小于等于|大于等于|不等于】"
   },
   "fixEquNeed": {
     "prefix": "fixEquNeed",
@@ -523,5 +523,107 @@
     "prefix": "fixEquTypeNeed",
     "body": ">fixEquTypeNeed | [${1:#装备类型#},${2:T}]",
     "description": "【条件】【符文词条专属】当前词条安装装备类型要求"
+  },
+  // 以下是新增条件/效果
+  "checkTempString": {
+    "prefix": "checkTempString",
+    "body": ">checkTempString | [\"${1:字符串}\",\"${2:目标字符串}\"]",
+    "description": "【条件】判断字符串的内容是否与目标字符串一致"
+  },
+  "tempStringSlic": {
+    "prefix": "tempStringSlic",
+    "body": ">tempStringSlic | [${1:#变量名#},${2:#起始下标#},${3:#终止下标#},${4:#步长#}]",
+    "description": "【效果】临时字符串切片，与Python切片格式一致"
+  },
+  "tempStringAppend2": {
+    "prefix": "tempStringAppend2",
+    "body": ">tempStringAppend2 | [${1:#str变量名#},${2:#数值#}]",
+    "description": "【效果】临时字符串追加，在字符串后追加数值"
+  },
+  "apStrToSelfString": {
+    "prefix": "apStrToSelfString",
+    "body": ">apStrToSelfString | \"${1:字符串}\"",
+    "description": "【效果】将字符串追加到自己属性显示框"
+  },
+  "addTsSizeToTn": {
+    "prefix": "addTsSizeToTn",
+    "body": ">addTsSizeToTn | [${1:#字符串名#},${2:#变量名#}]",
+    "description": "【效果】将临时字符串的长度添加到临时变量之中"
+  },
+  "newTempString": {
+    "prefix": "newTempString",
+    "body": ">newTempString | [${1:#变量名#},${2:#初始字符#}]",
+    "description": "【效果】新建临时字符串，当整个触发器组运行完毕后就删除"
+  },
+  "apProBarToSelfString": {
+    "prefix": "apProBarToSelfString",
+    "body": ">apProBarToSelfString | ${1:#浮点数#}",
+    "description": "【效果】将浮点数[0~1]做成进度条追加到自己属性显示框"
+  },
+  "appendEquNameToTs": {
+    "prefix": "appendEquNameToTs",
+    "body": ">appendEquNameToTs | [${1:#目标#},${2:#变量名#},${3:#装备类型#}]",
+    "description": "【效果】将用户的装备名追加到临时字符串之后"
+  },
+  "apBalBarToSelfString": {
+    "prefix": "apBalBarToSelfString",
+    "body": ">apBalBarToSelfString | [${1:#数值1#},${2:#数值2#}]",
+    "description": "【效果】(将两个数值做成平衡条追加到自己属性显示框"
+  },
+  "addEquRuneLevelToTN": {
+    "prefix": "addEquRuneLevelToTN",
+    "body": ">addEquRuneLevelToTN | [${1:#目标#},${2:#装备类型名#},${3:#词条名#},${4:#临时变量名#}]",
+    "description": "【效果】将某装备符文词条等级添加到临时变量里"
+  },
+  "tempStringMbi": {
+    "prefix": "tempStringMbi",
+    "body": ">tempStringMbi | [${1:#变量名#},${2:#数值#}]",
+    "description": "【效果】临时字符串自乘（翻倍）"
+  },
+  "tempStringAppend": {
+    "prefix": "tempStringAppend",
+    "body": ">tempStringAppend | [${1:#变量名#},\"${2:字符串}\"]",
+    "description": "【效果】临时字符串追加，在字符串后追加内容"
+  },
+  "apDigitToSelfString": {
+    "prefix": "apDigitToSelfString",
+    "body": ">apDigitToSelfString | ${1:#数字#}",
+    "description": "【效果】将数字追加到自己属性显示框"
+  },
+  "hpMaxAdd": {
+    "prefix": "hpMaxAdd",
+    "body": ">hpMaxAdd | [${1:#目标#},${2:#改变值#}]",
+    "description": "【效果】目标血量上限改变"
+  },
+  // 以下是Sugar_Chat的条件/效果
+  "checkStart": {
+    "prefix": "checkStart",
+    "body": ">checkStart | \"${1:字符串}\"",
+    "description": "【条件】【Chat】匹配消息头"
+  },
+  "checkEnd": {
+    "prefix": "checkEnd",
+    "body": ">checkEnd | \"${1:字符串}\"",
+    "description": "【条件】【Chat】匹配消息尾"
+  },
+  "checkSize": {
+    "prefix": "checkSize",
+    "body": ">checkSize | [${1:#int#},${2:#是否包括等于#}]",
+    "description": "【条件】【Chat】判断消息长短"
+  },
+  "checkMsg": {
+    "prefix": "checkMsg",
+    "body": ">checkMsg | \"${1:字符串}\"",
+    "description": "【条件】【Chat】判断消息整体是否为某段字符"
+  },
+  "checkKeyword": {
+    "prefix": "checkKeyword",
+    "body": ">checkKeyword | \"${1:字符串}\"",
+    "description": "【条件】【Chat】判断消息内是否有某一段内容"
+  },
+  "isDigit": {
+    "prefix": "isDigit",
+    "body": ">isDigit | \"${1:字符串}\"",
+    "description": "【条件】【Chat】判断一个字符内容是否都是数字"
   }
 }

@@ -1,0 +1,56 @@
+{
+  "name": "sugarcode",
+  "displayName": "SugarCode",
+  "description": "SugarCode 的 VS Code 插件",
+  "homepage": "https://github.com/Monody-S/SugarCode-Project/blob/main/README.md",
+  "version": "1.1.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Formatters",
+    "Other"
+  ],
+  "publisher": "MRSlouu",
+  "icon": "images/icon.png",
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "SugarCode",
+        "extensions": [
+          ".sgc"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./images/icon.svg",
+          "dark": "./images/icon.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "SugarCode",
+        "scopeName": "text.SugarCode",
+        "path": "./syntaxes/SugarCode.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "SugarCode",
+        "path": "./snippets/SugarCode.code-snippets"
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/Monody-S/SugarCode-Project/issues",
+    "email": "montmorillonite@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Monody-S/SugarCode-Project"
+  }
+}
