@@ -1,7 +1,7 @@
 {
   "name": "sugarcode",
   "displayName": "SugarCode",
-  "description": "SugarCode 的 VS Code 插件",
+  "description": "SugarCode",
   "homepage": "https://github.com/Monody-S/SugarCode-Project/blob/main/README.md",
   "version": "1.1.0",
   "engines": {
