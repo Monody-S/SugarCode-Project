@@ -625,5 +625,50 @@
     "prefix": "isDigit",
     "body": ">isDigit | \"${1:字符串}\"",
     "description": "【条件】【Chat】判断一个字符内容是否都是数字"
+  },
+  "noCostFre": {
+    "prefix": "noCostFre",
+    "body": ">noCostFre | ${1:T}",
+    "description": "【效果】不扣除次数"
+  },
+  "noAddHon": {
+    "prefix": "noAddHon",
+    "body": ">noAddHon | ${1:T}",
+    "description": "【效果】不增加荣誉值"
+  },
+  "noAddPower": {
+    "prefix": "noAddPower",
+    "body": ">noAddPower | ${1:T}",
+    "description": "【效果】不增加熟练度"
+  },
+  "noGetCoin": {
+    "prefix": "noGetCoin",
+    "body": ">noGetCoin | ${1:T}",
+    "description": "【效果】不获得金币"
+  },
+  "noLoseCoin": {
+    "prefix": "noLoseCoin",
+    "body": ">noLoseCoin | ${1:T}",
+    "description": "【效果】不丢失金币"
+  },
+  "noCheckCD": {
+    "prefix": "noCheckCD",
+    "body": ">noCheckCD | ${1:T}",
+    "description": "【效果】不判断是否处于出击CD"
+  },
+  "noUseActOtherCFZs": {
+    "prefix": "noUseActOtherCFZs",
+    "body": ">noUseActOtherCFZs | ${1:T}",
+    "description": "【效果】不使用出击方除额外触发组外的所有触发组"
+  },
+  "noUsePassOtherCFZs": {
+    "prefix": "noUsePassOtherCFZs",
+    "body": ">noUsePassOtherCFZs | ${1:T}",
+    "description": "【效果】不使用被动方除额外触发组外的所有触发组"
+  },
+  "useHp": {
+    "prefix": "useHp",
+    "body": ">useHp | ${1:T}",
+    "description": "【效果】使用血量模式"
   }
 }
