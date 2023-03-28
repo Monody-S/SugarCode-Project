@@ -3,7 +3,7 @@
   "displayName": "SugarCode for Web",
   "description": "SugarCode Plugin for Web",
   "homepage": "https://github.com/Monody-S/SugarCode-Project/blob/main/README.md",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "engines": {
     "vscode": "^1.74.0"
   },
