@@ -1,10 +1,13 @@
 # SugarCode-Project
-SugarCode-Project是一系列有关SugarCode的库的集合，旨在减轻数据编写的负担。
+`SugarCode-Project` 是一系列有关 `SugarCode` 的库的集合，旨在减轻数据编写的负担。
 
-当然，目前SugarCode主要用于SugarBot的开发和维护工作。
+当然，目前 `SugarCode` 主要用于 `SugarBot` 的开发和维护工作。
 - SugarCode-Python
 - SugarCode-VScodePlugin
+- SugarCodeBlock
 ## SugarCode-Python
-SugarCode的基于Python的“编译器”，用于编译和反编译SugarCode（详见[SugarCode-Python/README.md](https://github.com/Monody-S/SugarCode-Project/blob/main/SugarCode-Python/README.md)）。
-## SugarCode-VScodePlugin
-SugarCode的VSCode插件，用于编写SugarCode（详见[SugarCode-VScodePlugin/README.md](https://github.com/Monody-S/SugarCode-Project/blob/main/SugarCode-VScodePlugin/README.md)）。
+SugarCode的基于Python的“编译器”，用于编译和反编译SugarCode（详见 README.md](https://github.com/Monody-S/SugarCode-Project/blob/main/SugarCode-Python/README.md)）。
+## SugarCode-VScodePlugin （已停止维护）
+SugarCode的 `VS Code` 插件，用于编写 `SugarCode` （详见 [README.md](https://github.com/Monody-S/SugarCode-Project/blob/main/SugarCode-VScodePlugin/README.md)）。
+## (SugarCodeBlock)[https://github.com/montmorill/SugarCodeBlock]
+基于 `blockly` 的 `SugarCode` 图形化实现，由 (@一块蒙脱石)[https://github.com/montmorill] 维护。 
