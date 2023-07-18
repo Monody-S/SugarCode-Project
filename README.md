@@ -6,8 +6,8 @@
 - SugarCode-VScodePlugin
 - SugarCodeBlock
 ## SugarCode-Python
-SugarCode的基于Python的“编译器”，用于编译和反编译SugarCode（详见 README.md](https://github.com/Monody-S/SugarCode-Project/blob/main/SugarCode-Python/README.md)）。
+SugarCode的基于Python的“编译器”，用于编译和反编译SugarCode（详见 [README.md](https://github.com/Monody-S/SugarCode-Project/blob/main/SugarCode-Python/README.md)）。
 ## SugarCode-VScodePlugin （已停止维护）
 SugarCode的 `VS Code` 插件，用于编写 `SugarCode` （详见 [README.md](https://github.com/Monody-S/SugarCode-Project/blob/main/SugarCode-VScodePlugin/README.md)）。
-## (SugarCodeBlock)[https://github.com/montmorill/SugarCodeBlock]
-基于 `blockly` 的 `SugarCode` 图形化实现，由 (@一块蒙脱石)[https://github.com/montmorill] 维护。 
+## SugarCodeBlock
+[`SugarCodeBlock`](https://github.com/montmorill/SugarCodeBlock) 是基于 `blockly` 的 `SugarCode` 图形化实现，由 [@一块蒙脱石](https://github.com/montmorill) 维护。 
